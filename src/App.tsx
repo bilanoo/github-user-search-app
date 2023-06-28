@@ -2,6 +2,7 @@ import "./App.css";
 import Header from "./Header";
 import { Grid } from "@mui/material";
 import SearchBar from "./SearchBar";
+import DevInformation from "./DevInformation";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       >
         <Header />
         <SearchBar />
+        <DevInformation />
       </Grid>
     </>
   );

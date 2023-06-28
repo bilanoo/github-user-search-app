@@ -1,6 +1,18 @@
 import styled from "@emotion/styled";
 import { Button, Grid, TextField } from "@mui/material";
 
+export const SearchContainer = styled(Grid)(() => ({
+  "&": {
+    backgroundColor: "#1E2A47",
+    borderRadius: "14px",
+    display: "flex",
+    justifyContent: "space-between",
+    minWidth: "100%",
+    minHeight: "60px",
+    marginTop: "0",
+  },
+}));
+
 export const SearchField = styled(TextField)(() => ({
   "&": {
     minWidth: "50%",
@@ -15,18 +27,6 @@ export const SearchField = styled(TextField)(() => ({
     fontSize: "18px",
     fontFamily: "Space Mono, monospace",
     fontWeight: "bold",
-  },
-}));
-
-export const SearchContainer = styled(Grid)(() => ({
-  "&": {
-    backgroundColor: "#1E2A47",
-    borderRadius: "14px",
-    display: "flex",
-    justifyContent: "space-between",
-    minWidth: "100%",
-    minHeight: "60px",
-    marginTop: "0",
   },
 }));
 
