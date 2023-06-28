@@ -12,6 +12,7 @@ const ProfilePicture = () => {
       <img
         src={"https://avatars.githubusercontent.com/u/583231?v=4"}
         style={profilePictureStyles}
+        alt="github-user-profile-picture"
       />
     </ProfilePictureContainer>
   );

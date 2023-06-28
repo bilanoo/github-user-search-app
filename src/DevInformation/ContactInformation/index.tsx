@@ -18,19 +18,19 @@ const ContactInformation = () => {
     <>
       <DevPersonalInformation>
         <ContactInformationContainer>
-          <img src={locationIcon} style={iconStyles} />
+          <img src={locationIcon} style={iconStyles} alt="location-icon" />
           <ContactInformationText>San Francisco</ContactInformationText>
         </ContactInformationContainer>
         <ContactInformationContainer>
-          <img src={linkIcon} style={iconStyles} />
+          <img src={linkIcon} style={iconStyles} alt="link-chain-icon" />
           <ContactInformationText>https://github.blog</ContactInformationText>
         </ContactInformationContainer>
         <ContactInformationContainer>
-          <img src={twitterIcon} style={iconStyles} />
+          <img src={twitterIcon} style={iconStyles} alt="twitter-icon" />
           <ContactInformationText>Not available</ContactInformationText>
         </ContactInformationContainer>
         <ContactInformationContainer>
-          <img src={companyIcon} style={iconStyles} />
+          <img src={companyIcon} style={iconStyles} alt="company-icon" />
           <ContactInformationText>@github</ContactInformationText>
         </ContactInformationContainer>
       </DevPersonalInformation>
