@@ -1,3 +1,4 @@
+import { useDevInformationStore } from "../../store/DevInformation.store";
 import {
   InformationContainer,
   InformationTitle,
@@ -6,20 +7,21 @@ import {
 } from "./style";
 
 const ReposAndFollowersInformation = () => {
+  const { devInformation } = useDevInformationStore((state) => state);
   return (
     <>
       <ReposAndFollowersContainer>
         <InformationContainer>
           <InformationTitle>Repos</InformationTitle>
-          <InformationValue>8</InformationValue>
+          <InformationValue>{devInformation?.public_repos}</InformationValue>
         </InformationContainer>
         <InformationContainer>
           <InformationTitle>Followers</InformationTitle>
-          <InformationValue>9644</InformationValue>
+          <InformationValue>{devInformation?.followers}</InformationValue>
         </InformationContainer>
         <InformationContainer>
           <InformationTitle>Following</InformationTitle>
-          <InformationValue>9</InformationValue>
+          <InformationValue>{devInformation?.following}</InformationValue>
         </InformationContainer>
       </ReposAndFollowersContainer>
     </>
