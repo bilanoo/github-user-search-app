@@ -1,5 +1,9 @@
 import { CSSProperties } from "react";
 import sunIcon from "../assets/icon-sun.svg";
+import {
+  DarkOrLightMode,
+  useDevInformationStore,
+} from "../store/DevInformation.store";
 
 const Header = () => {
   const titleHeaderStyles = {
@@ -26,13 +30,26 @@ const Header = () => {
     cursor: "pointer",
   };
 
+  const { updateLightOrDarkMode, darkOrLightMode } = useDevInformationStore(
+    (state) => state
+  );
+
+  function handleLightOrDarkModeSwitch() {
+    const newMode =
+      darkOrLightMode === DarkOrLightMode.LIGHT
+        ? DarkOrLightMode.DARK
+        : DarkOrLightMode.LIGHT;
+    updateLightOrDarkMode(newMode);
+  }
+
+  console.log(darkOrLightMode);
   return (
     <>
       <header style={headingContainerStyles}>
         <h1 style={titleHeaderStyles}> devfinder</h1>
         <div
           style={buttonContainerStyles}
-          onClick={() => console.log("clicked!")}
+          onClick={handleLightOrDarkModeSwitch}
         >
           <p>LIGHT</p>
           <img src={sunIcon} alt="sun-icon" />
